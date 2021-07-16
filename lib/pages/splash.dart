@@ -8,7 +8,9 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Image.asset("image/splash.png"),
+          Positioned(
+            top: 200,
+            child: Center(child: Image.asset("images/splash.png"))),
         ],
       ),
 

@@ -50,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Column(
               children: [
                 Text(
-                  "LogIn",
+                  "REGISTER",
                   style: TextStyle(
                     fontSize: 24,
                   ),
@@ -69,6 +69,16 @@ class _RegisterPageState extends State<RegisterPage> {
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
                     decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.phone),
+                      hintText: "Phone",
+                    ),
+                    keyboardType: TextInputType.number,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextFormField(
+                    decoration: InputDecoration(
                       prefixIcon: Icon(Icons.lock),
                       suffixIcon: Icon(Icons.remove_red_eye_outlined),
                       hintText: "Password",
@@ -76,7 +86,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     obscureText: true,
                   ),
                 ),
-                Text("FORGOT PASSWORD?"),
+                
               ],
             ),
           ),
@@ -104,7 +114,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 onPressed: () {},
                 child: Text(
-                  "LOGIN",
+                  "REGISTER",
                   style: TextStyle(fontSize: 24, fontFamily: "Roboto"),
                 ),
               ),
@@ -112,29 +122,7 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
         ),
 
-        Positioned(
-          top: 620,
-          left: 84,
-          child: GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '');
-            },
-            child: RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: 'Are you a new user?',
-                    style: TextStyle(color: Colors.grey, fontSize: 15),
-                  ),
-                  TextSpan(
-                    text: 'Register here',
-                    style: TextStyle(color: Colors.red, fontSize: 14),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
+        
       ]),
 
       
